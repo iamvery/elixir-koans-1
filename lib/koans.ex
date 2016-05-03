@@ -77,7 +77,8 @@ defmodule Koans do
       @compile :nowarn_unused_vars
       Module.register_attribute(__MODULE__, :koans, accumulate: true)
 
-      import ExUnit.Assertions
+      import ExUnit.Assertions, except: [assert_receive: 1, assert_receive: 2, assert_receive: 3, assert_received: 1, assert_received: 2]
+      import AssertionsExt
       import Koans
 
       @before_compile Koans
