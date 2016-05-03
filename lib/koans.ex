@@ -77,7 +77,6 @@ defmodule Koans do
       @compile :nowarn_unused_vars
       Module.register_attribute(__MODULE__, :koans, accumulate: true)
 
-      require ExUnit.Assertions
       import ExUnit.Assertions
       import Koans
 
