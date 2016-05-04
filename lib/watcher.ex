@@ -19,7 +19,6 @@ defmodule Watcher do
   defp reload(file) do
     try do
       file
-      |> normalize
       |> Code.load_file
       |> Enum.map(&(elem(&1, 0)))
       |> Enum.find(&Runner.koan?/1)
@@ -28,9 +27,5 @@ defmodule Watcher do
     rescue
       e -> Display.show_compile_error(e)
     end
-  end
-
-  defp normalize(file) do
-    String.replace_suffix(file, "___jb_tmp___", "")
   end
 end
