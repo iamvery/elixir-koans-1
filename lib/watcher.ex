@@ -2,7 +2,7 @@ defmodule Watcher do
   use ExFSWatch, dirs: ["lib/koans"]
 
   def callback(file, events)  do
-    if Enum.member?(events, :modified) do
+    if requires_reload?(file, events) do
       reload(file)
 
       if Tracker.complete? do
@@ -10,6 +10,10 @@ defmodule Watcher do
         exit(:normal)
       end
     end
+  end
+
+  defp requires_reload?(file, events) do
+    String.ends_with?(file, [".ex", ".exs"]) and Enum.member?(events, :modified)
   end
 
   defp reload(file) do
