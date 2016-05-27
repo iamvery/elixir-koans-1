@@ -1,0 +1,16 @@
+TODO might be nice to show left and right values when assertion fails
+TODO it seems like the more lessons are solved the slower the meditate runner runs
+TODO String.repeat/2 and String.upcase/1 example might work better with upcase form missing
+TODO why isn't Integer.is_odd/1 a predicate function?
+TODO meditate runner does not recover from error in koan
+TODO add lesson about character lists
+TODO illustrate return value of Integer.parse/2 includes unparsable bits of string
+TODO illustrate how Integer.parse/1 handles decimal values
+TODO update Float.parse/1 with unparsable bits to actually be a float
+TODO maybe pull Range stuff out of numbers koan into it's own module
+TODO not a huge fan of Range lessons in general. X..Y is idiomatic range creation...
+TODO first tuple lesson feels a little pointless
+TODO not a fan of List.first/1 being initial exposure to first element of list. pattern matching greatly preferred
+TODO the initial example of List.delete is confusing because the element value and index are the same
+TODO add example of List.wrap(nil)
+TODO update last keyword list example to show "else" case
